@@ -1,0 +1,40 @@
+from modules.report import ReportManager
+
+class AdminManager:
+    def __init__(self, db):
+        self.db = db
+        self.report_manager = ReportManager(db)
+
+    def admin_menu(self, product_manager, user_manager, order_manager):
+        while True:
+            print("\n--- ADMIN MENU ---")
+            print("1. View users")
+            print("2. Add product")
+            print("3. Update product")
+            print("4. View orders")
+            print("5. Generate report")
+            print("6. View reports")
+            print("7. Export report")
+            print("0. Exit")
+
+            c = input("Choose: ")
+
+            if c == "1":
+                for u in self.db["users"]:
+                    print(u)
+            elif c == "2":
+                product_manager.add_product()
+            elif c == "3":
+                product_manager.update_product()
+            elif c == "4":
+                for o in self.db["orders"]:
+                    print(o)
+            elif c == "5":
+                self.report_manager.generate_report()
+            elif c == "6":
+                self.report_manager.view_reports()
+            elif c == "7":
+                rid = int(input("Report ID: "))
+                self.report_manager.export_report(rid)
+            elif c == "0":
+                break

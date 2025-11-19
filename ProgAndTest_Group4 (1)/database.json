@@ -1,0 +1,74 @@
+{
+    "users": [
+        {
+            "name": "Duy Ph\u00fac",
+            "email": "duyphuc.0422@gmail.com",
+            "password": "Duyphuc123",
+            "role": "customer"
+        },
+        {
+            "name": "tranduyphong",
+            "email": "duyphongpt123@gmail.com",
+            "password": "phong123",
+            "role": "customer"
+        }
+    ],
+    "products": [
+        {
+            "id": 1,
+            "name": "iPhone 14 Pro Max",
+            "price": 28990000,
+            "stock": 10
+        },
+        {
+            "id": 2,
+            "name": "Samsung Galaxy S23 Ultra",
+            "price": 25990000,
+            "stock": 8
+        },
+        {
+            "id": 3,
+            "name": "MacBook Air M2",
+            "price": 28990000,
+            "stock": 5
+        },
+        {
+            "id": 4,
+            "name": "Chu\u1ed9t Logitech G102",
+            "price": 390000,
+            "stock": 25
+        },
+        {
+            "id": 5,
+            "name": "Tai nghe Sony WH-1000XM4",
+            "price": 4990000,
+            "stock": 12
+        }
+    ],
+    "orders": [
+        {
+            "order_id": 1,
+            "user": "duyphuc.0422@gmail.com",
+            "items": [],
+            "total": 0
+        },
+        {
+            "order_id": 2,
+            "user": "duyphuc.0422@gmail.com",
+            "items": [
+                {
+                    "order_id": 2,
+                    "product_id": 1,
+                    "quantity": 28990000,
+                    "unit_price": 28990000,
+                    "subtotal": 840420100000000
+                }
+            ],
+            "total": 840420100000000
+        }
+    ],
+    "cart": {
+        "duyphuc.0422@gmail.com": []
+    },
+    "reports": []
+}
